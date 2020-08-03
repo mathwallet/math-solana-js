@@ -4,14 +4,19 @@
 
 ## Using Math Wallet Solana JS API
 
-
+### Account
 ```javascript
-// login
+// Log in
 window.solana.getAccounts().then((accounts) => {
     // accounts -> [{ publiceKey, name }]
 });
 
-// Send transaction
+// Log out
+window.solana.forgetAccounts().then(() => {});
+```
+
+### Send Transaction
+``` javascript
 import * as web3 from "@solana/web3.js";
 
 // Transfer
